@@ -1,0 +1,2 @@
+include requirements.txt
+include swagger_server/swagger/swagger.yaml

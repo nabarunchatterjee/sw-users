@@ -1,0 +1,7 @@
+[distutils]
+index-servers = redmart
+
+[redmart]
+  repository: http://{{pypi_server}}
+  username: testuser
+  password: testpassword

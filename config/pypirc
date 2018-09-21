@@ -1,0 +1,6 @@
+[distutils]
+index-servers = redmart
+[redmart]
+  repository: http://192.168.33.10
+  username: testuser
+  password: testpassword

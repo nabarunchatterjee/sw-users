@@ -1,0 +1,56 @@
+actionid: py36
+msg: getenv
+cmdargs: '/Users/nabarun/src/redmart/sw-users/.tox/py36/bin/python -m pip install -r/Users/nabarun/src/redmart/sw-users/requirements.txt -r/Users/nabarun/src/redmart/sw-users/test-requirements.txt'
+
+Looking in indexes: https://pypi.org/simple, http://192.168.33.10/
+Collecting connexion==1.1.15 (from -r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/06/45/e87be44f33982b2ee7b4fd5b1fe8bb616a22517f751f8fe2ee0b5567d231/connexion-1.1.15-py2.py3-none-any.whl (1.0MB)
+Collecting python_dateutil==2.6.0 (from -r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 2))
+  Downloading https://files.pythonhosted.org/packages/40/8b/275015d7a9ec293cf1bbf55433258fbc9d0711890a7f6dc538bac7b86bce/python_dateutil-2.6.0-py2.py3-none-any.whl (194kB)
+Requirement already satisfied: setuptools>=21.0.0 in ./.tox/py36/lib/python3.6/site-packages (from -r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 3)) (40.4.2)
+Collecting gunicorn==19.9.0 (from -r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 4))
+  Downloading https://files.pythonhosted.org/packages/8c/da/b8dd8deb741bff556db53902d4706774c8e1e67265f69528c14c003644e6/gunicorn-19.9.0-py2.py3-none-any.whl (112kB)
+Collecting sqlalchemy==1.2.12 (from -r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 5))
+Collecting flask_testing==0.6.1 (from -r /Users/nabarun/src/redmart/sw-users/test-requirements.txt (line 1))
+Collecting coverage>=4.0.3 (from -r /Users/nabarun/src/redmart/sw-users/test-requirements.txt (line 2))
+  Using cached https://files.pythonhosted.org/packages/a3/7e/c94c21d643bfe7017615994df7b52292a33c8dcf36a6f694af110594edba/coverage-4.5.1-cp36-cp36m-macosx_10_12_x86_64.whl
+Collecting nose>=1.3.7 (from -r /Users/nabarun/src/redmart/sw-users/test-requirements.txt (line 3))
+  Using cached https://files.pythonhosted.org/packages/15/d8/dd071918c040f50fa1cf80da16423af51ff8ce4a0f2399b7bf8de45ac3d9/nose-1.3.7-py3-none-any.whl
+Collecting pluggy>=0.3.1 (from -r /Users/nabarun/src/redmart/sw-users/test-requirements.txt (line 4))
+  Using cached https://files.pythonhosted.org/packages/f5/f1/5a93c118663896d83f7bcbfb7f657ce1d0c0d617e6b4a443a53abcc658ca/pluggy-0.7.1-py2.py3-none-any.whl
+Collecting py>=1.4.31 (from -r /Users/nabarun/src/redmart/sw-users/test-requirements.txt (line 5))
+  Using cached https://files.pythonhosted.org/packages/c8/47/d179b80ab1dc1bfd46a0c87e391be47e6c7ef5831a9c138c5c49d1756288/py-1.6.0-py2.py3-none-any.whl
+Collecting randomize>=0.13 (from -r /Users/nabarun/src/redmart/sw-users/test-requirements.txt (line 6))
+  Using cached https://files.pythonhosted.org/packages/00/de/bb4cc7e69c2d6625102937b868a2aee56ad1ea2a3b40c8fafdc793558ab7/randomize-0.14-py2.py3-none-any.whl
+Collecting flask>=0.10.1 (from connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/7f/e7/08578774ed4536d3242b14dacb4696386634607af824ea997202cd0edb4b/Flask-1.0.2-py2.py3-none-any.whl
+Collecting six>=1.9 (from connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/67/4b/141a581104b1f6397bfa78ac9d43d8ad29a7ca43ea90a2d863fe3056e86a/six-1.11.0-py2.py3-none-any.whl
+Collecting requests>=2.9.1 (from connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/65/47/7e02164a2a3db50ed6d8a6ab1d6d60b69c4c3fdf57a284257925dfc12bda/requests-2.19.1-py2.py3-none-any.whl
+Collecting clickclick>=1.2 (from connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/b6/51/2b04f7a56dcbacc0e3a7cf726e1d88d28866bf488a7a0668582306e1e643/clickclick-1.2.2-py2.py3-none-any.whl
+Collecting inflection>=0.3.1 (from connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+Collecting PyYAML>=3.11 (from connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+Collecting swagger-spec-validator>=2.0.2 (from connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/8c/5a/4927b37bf7715e043eec183e47df28af19b5d245e2246f8ded890a703cbf/swagger_spec_validator-2.4.0-py2.py3-none-any.whl
+Collecting jsonschema>=2.5.1 (from connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/77/de/47e35a97b2b05c2fadbec67d44cfcdcd09b8086951b331d82de90d2912da/jsonschema-2.6.0-py2.py3-none-any.whl
+Collecting Jinja2>=2.10 (from flask>=0.10.1->connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/7f/ff/ae64bacdfc95f27a016a7bed8e8686763ba4d277a78ca76f32659220a731/Jinja2-2.10-py2.py3-none-any.whl
+Collecting Werkzeug>=0.14 (from flask>=0.10.1->connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/20/c4/12e3e56473e52375aa29c4764e70d1b8f3efa6682bef8d0aae04fe335243/Werkzeug-0.14.1-py2.py3-none-any.whl
+Collecting itsdangerous>=0.24 (from flask>=0.10.1->connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+Collecting click>=5.1 (from flask>=0.10.1->connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/34/c1/8806f99713ddb993c5366c362b2f908f18269f8d792aff1abfd700775a77/click-6.7-py2.py3-none-any.whl
+Collecting certifi>=2017.4.17 (from requests>=2.9.1->connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/df/f7/04fee6ac349e915b82171f8e23cee63644d83663b34c539f7a09aed18f9e/certifi-2018.8.24-py2.py3-none-any.whl
+Collecting chardet<3.1.0,>=3.0.2 (from requests>=2.9.1->connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/bc/a9/01ffebfb562e4274b6487b4bb1ddec7ca55ec7510b22e4c51f14098443b8/chardet-3.0.4-py2.py3-none-any.whl
+Collecting urllib3<1.24,>=1.21.1 (from requests>=2.9.1->connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/bd/c9/6fdd990019071a4a32a5e7cb78a1d92c53851ef4f56f62a3486e6a7d8ffb/urllib3-1.23-py2.py3-none-any.whl
+Collecting idna<2.8,>=2.5 (from requests>=2.9.1->connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+  Using cached https://files.pythonhosted.org/packages/4b/2a/0276479a4b3caeb8a8c1af2f8e4355746a97fab05a372e4a2c6a6b876165/idna-2.7-py2.py3-none-any.whl
+Collecting MarkupSafe>=0.23 (from Jinja2>=2.10->flask>=0.10.1->connexion==1.1.15->-r /Users/nabarun/src/redmart/sw-users/requirements.txt (line 1))
+Installing collected packages: MarkupSafe, Jinja2, Werkzeug, itsdangerous, click, flask, six, certifi, chardet, urllib3, idna, requests, PyYAML, clickclick, inflection, jsonschema, swagger-spec-validator, connexion, python-dateutil, gunicorn, sqlalchemy, flask-testing, coverage, nose, pluggy, py, randomize
+Successfully installed Jinja2-2.10 MarkupSafe-1.0 PyYAML-3.13 Werkzeug-0.14.1 certifi-2018.8.24 chardet-3.0.4 click-6.7 clickclick-1.2.2 connexion-1.1.15 coverage-4.5.1 flask-1.0.2 flask-testing-0.6.1 gunicorn-19.9.0 idna-2.7 inflection-0.3.1 itsdangerous-0.24 jsonschema-2.6.0 nose-1.3.7 pluggy-0.7.1 py-1.6.0 python-dateutil-2.6.0 randomize-0.14 requests-2.19.1 six-1.11.0 sqlalchemy-1.2.12 swagger-spec-validator-2.4.0 urllib3-1.23

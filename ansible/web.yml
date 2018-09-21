@@ -1,0 +1,65 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install apt packages
+      apt:
+        name: "{{item}}"
+      with_items:
+          - nginx
+          - gunicorn
+          - supervisor
+          - sqlite3
+          - libsqlite3-dev
+          - python3-pip
+          - python-virtualenv
+
+
+    - name: Render and copy supervisor config
+      template:
+        src: templates/swag_supervisor.conf.j2
+        dest: "/etc/supervisor/conf.d/swag.conf"
+
+    - name: Setup nginx site config
+      template:
+          src: templates/swag_nginx.j2
+          dest: "/etc/nginx/sites-available/default"
+
+
+- hosts: all
+  tasks:
+    - name: Creates .pip directory
+      file: path="/home/{{ansible_ssh_user}}/.pip" state=directory owner="{{ansible_ssh_user}}" group="{{ansible_ssh_user}}"
+
+    - name: Create pip.conf
+      template:
+        src: templates/pip.conf
+        dest: "/home/{{ansible_ssh_user}}/.pip/pip.conf"
+        owner: "{{ansible_ssh_user}}"
+        group: "{{ansible_ssh_user}}"
+
+    - name: Create .pypirc
+      template:
+        src: templates/pypirc
+        dest: "/home/{{ansible_ssh_user}}/.pypirc"
+
+    - name: install app package in a virtualenv
+      pip:
+         name: "{{app_name}}"
+         version: "{{app_version}}"
+         virtualenv: "/home/{{ ansible_ssh_user }}/swag"
+         virtualenv_python: python3
+
+
+- hosts: all
+  become: yes
+  tasks:
+    - name: Restart app
+      supervisorctl:
+         name: "{{app_name}}"
+         state: restarted
+
+    - name: Reload nginx
+      service:
+         name: "nginx"
+         state: reloaded
