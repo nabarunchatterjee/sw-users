@@ -1,9 +1,0 @@
-actionid: py36
-msg: getenv
-cmdargs: '/Users/nabarun/src/redmart/env-test/bin/python3.6 -m virtualenv --python /Users/nabarun/src/redmart/env-test/bin/python3.6 py36'
-
-Already using interpreter /Users/nabarun/src/redmart/env-test/bin/python3.6
-Using real prefix '/usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6'
-New python executable in /Users/nabarun/src/redmart/sw-users/.tox/py36/bin/python3.6
-Also creating executable in /Users/nabarun/src/redmart/sw-users/.tox/py36/bin/python
-Installing setuptools, pip, wheel...done.

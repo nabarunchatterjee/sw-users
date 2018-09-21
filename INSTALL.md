@@ -30,7 +30,9 @@ Further Improvements:
 ===
 
 The db could have been separated to a different server.
+
 Monitoring could be setup easily using Prometheus/Sensu/Shinken
+
 Test cases should be run before deploying
 
 
@@ -38,6 +40,7 @@ Tools:
 ===
 
 Ansible for config management
+
 Vagrant for infra provisioning
 
 Sources:
