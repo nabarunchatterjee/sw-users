@@ -39,3 +39,9 @@ Tools:
 
 Ansible for config management
 Vagrant for infra provisioning
+
+Sources:
+===
+https://www.vagrantup.com
+https://www.linode.com/docs/applications/project-management/how-to-create-a-private-python-package-repository/
+https://docs.ansible.com

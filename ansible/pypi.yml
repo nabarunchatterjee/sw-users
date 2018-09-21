@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks:
-    - name: Update repositories cache and install "foo" package
+    - name: Install apt packages
       apt:
         name: "{{item}}"
       with_items:
@@ -15,6 +15,7 @@
       with_items:
           - pypiserver
           - passlib
+
     - htpasswd:
         path: /home/vagrant/htpasswd.txt
         name: testuser
@@ -22,17 +23,18 @@
         owner: www-data
         group: www-data
         mode: 0640
+
     - name: Creates directory
       file: path=/home/vagrant/packages state=directory owner=www-data group=www-data
 
-    - name: example copying file with owner and permissions
+    - name: copy pypi server uwsgi config
       template:
         src: templates/pypiserver.wsgi
         dest: "/home/{{ansible_ssh_user}}/packages/pypiserver.wsgi"
         owner: www-data
         group: www-data
 
-    - name: example copying file with owner and permissions
+    - name: copy apache site config
       template:
         src: templates/pypiserver.conf
         dest: /etc/apache2/sites-available/pypiserver.conf
@@ -44,10 +46,10 @@
     - name: Rolling back - Removing out virtualhost
       command: a2dissite 000-default.conf
 
-    - name: Rolling back - Removing out virtualhost
+    - name: Add site to apache
       command: a2ensite pypiserver.conf
 
-    - name: Start service httpd, if not running
+    - name: Restart apache2
       service:
          name: apache2
          state: restarted
